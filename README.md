@@ -1,42 +1,49 @@
 # Network-port-Scanner
-A fast, multi-threaded network port scanner with a modern GUI, built using Python. This tool allows users to scan a range of ports on a target host, detect open services, and retrieve banner information.
+
+A fast, multi-threaded network port scanner with a modern GUI, built using Python. This tool allows you to scan ports, detect open services, and grab banners in real-time.
 
 ✨ Features
-⚡ Multi-threaded scanning (fast performance)
+⚡ High-speed multi-threaded scanning
 🎯 Scan custom port ranges
-🌐 Hostname → IP resolution
-🔍 Detect common services (HTTP, SSH, FTP, etc.)
-🧠 Banner grabbing for deeper inspection
-📊 Real-time progress tracking
-🖥️ Modern dark-themed GUI (Tkinter)
-⏹️ Start/Stop scanning anytime
-💾 Save scan results to a file
-🛠️ Technologies Used
+🌐 Resolve domain names to IP
+🔍 Identify common services (HTTP, SSH, FTP, etc.)
+🧠 Banner grabbing for service insights
+📊 Real-time progress bar
+🖥️ Clean dark-themed GUI
+⏹️ Stop scans anytime
+💾 Export results to .txt
+🛠️ Tech Stack
 Python 3
-socket (network communication)
-threading & concurrent.futures (parallel scanning)
-tkinter (GUI)
-queue (thread-safe communication)
+socket – network communication
+threading + concurrent.futures – parallel execution
+tkinter – GUI
+queue – thread-safe messaging
+📂 Project Structure
+.
+├── Networkscanner.py   # Main application
+└── README.md           # Project documentation
 📦 Installation
-Clone or download the project
-Make sure Python 3 is installed
-No external dependencies required 🎉
-
-Run the program:
-
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/advanced-port-scanner.git
+cd advanced-port-scanner
+2️⃣ Run the Application
 python Networkscanner.py
+
+✅ No external dependencies required
+
 🧑‍💻 Usage
-Enter a target (IP address or domain name)
-Specify:
+Enter a target (IP or domain)
+Set:
 Start Port (default: 1)
 End Port (default: 1024)
 Click ▶ Start
-Watch results in real-time:
+View:
 Open ports
-Detected service
-Banner (if available)
-Click ⏹ Stop to halt scanning
-Click 💾 Save to export results
+Services
+Banners
+Optional:
+⏹ Stop scan
+💾 Save results
 📊 Example Output
 🎯 Target: example.com (93.184.216.34)
 
@@ -46,22 +53,28 @@ Click 💾 Save to export results
 [+] 22 (SSH)
 ➡ OpenSSH 7.6p1 Ubuntu
 🧠 How It Works
-Uses TCP connect_ex() to check if ports are open
-Runs scans concurrently using a ThreadPoolExecutor
-Uses a queue system to safely update the GUI
-Attempts to grab banners from open ports
-Tracks progress and updates UI dynamically
+Uses TCP connect_ex() to check open ports
+Runs scans concurrently using ThreadPoolExecutor
+Communicates results via a thread-safe queue
+Updates GUI dynamically with progress
+Attempts banner grabbing from open sockets
 ⚠️ Disclaimer
 
-This tool is intended for educational and authorized testing purposes only.
+🚨 This tool is for educational and authorized use only
 
-Do NOT scan networks or systems without permission.
-
-Unauthorized scanning may be illegal.
-
-🔮 Future Improvements
-🔐 OS detection (fingerprinting)
-📡 UDP scanning support
+Do NOT scan systems without permission
+Unauthorized scanning may be illegal
+🔮 Roadmap / Future Improvements
+🔐 OS fingerprinting
+📡 UDP scanning
 📁 Export to CSV/JSON
-🌍 Network-wide scanning
-🎨 Enhanced UI/UX
+🌍 Multi-host scanning
+🎨 UI enhancements
+🤝 Contributing
+
+Contributions are welcome!
+
+Fork the repo
+Create a new branch
+Commit your changes
+Open a Pull Request
